@@ -3,11 +3,11 @@
 
 int main(void)
 {
-	char str1[50];
+	char str[50];
 
-	strcpy(str1, "\"Programming is like building a multilingual puzzle\n");
+	strcpy(str, "\"Programming is like building a multilingual puzzle\n");
 
-	puts(str1);
+	puts(str);
 
 	return (0);
 }
