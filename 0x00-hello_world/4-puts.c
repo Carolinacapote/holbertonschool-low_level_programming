@@ -1,13 +1,10 @@
 #include <stdio.h>
-#include <string.h>
 
 int main(void)
 {
-	char str[51];
+	puts("\"Programming is like building a multilingual puzzle\n");
 
-	strcpy(str, "\"Programming is like building a multilingual puzzle\n");
-
-	puts(str);
+	getchar();
 
 	return (0);
 }
