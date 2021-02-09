@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
+ * print_alphabet - Entry point
  *
- * Return: Always 0 (Success)
+ * return nothing
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char ch;
 
@@ -15,5 +15,4 @@ int main(void)
 		_putchar(ch);
 	}
 	 _putchar('\n');
-	return (0);
 }
