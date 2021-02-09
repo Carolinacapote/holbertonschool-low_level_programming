@@ -10,19 +10,14 @@
 
 int print_last_digit(int r)
 {
-	int lastDigit, neg;
+	int lastDigit;
 
 	lastDigit = (r % 10);
-	neg = (lastDigit * -1);
 
-	if (lastDigit >= 0)
+	if (lastDigit < 0)
 	{
-		_putchar(lastDigit + '0');
+		lastDigit = (lastDigit * -1);
 	}
-	else
-	{
-		_putchar(neg + '0');
-	}
-
-	return (neg);
+	_putchar(lastDigit + '0');
+	return (lastDigit);
 }
