@@ -7,18 +7,22 @@
  */
 void rev_string(char *s)
 {
-	int length, row;
+	int i, j;
+	char temporal, half_string;
 
-	length = 0;
-	while (*s != '\0')
+	i = 0;
+	while (s[i] != 0)
 	{
-		length++;
-		s++;
+		i++;
 	}
-	for (row = length; row >= 0; row--)
+	i--;
+	j = i;
+	half_string = i / 2;
+	for (j = 0; j < half_string; j++)
 	{
-		_putchar(*s);
-		s--;
+		temporal = s[j];
+		s[j] = s[i];
+		s[i] = temporal;
+		i--;
 	}
-	_putchar('\n');
 }
