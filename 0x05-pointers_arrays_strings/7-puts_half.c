@@ -12,11 +12,10 @@ void puts_half(char *str)
 	length = 0;
 	while (*str != '\0')
 	{
-		length++;
 		str++;
+		length++;
 	}
 	half_string = (length / 2);
-	half_string = length - half_string;
 	while (*(str - half_string) != '\0')
 	{
 		_putchar(*(str - half_string));
