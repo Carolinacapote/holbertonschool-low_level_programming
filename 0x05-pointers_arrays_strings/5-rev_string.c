@@ -7,8 +7,8 @@
  */
 void rev_string(char *s)
 {
-	int i, j;
-	char temporal, half_string;
+	int i, j, half_string;
+	char temporal;
 
 	i = 0;
 	while (s[i] != 0)
