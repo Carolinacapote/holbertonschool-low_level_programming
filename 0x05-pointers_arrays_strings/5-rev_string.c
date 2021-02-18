@@ -18,7 +18,7 @@ void rev_string(char *s)
 	i--;
 	j = i;
 	half_string = i / 2;
-	for (j = 0; j < half_string; j++)
+	for (j = 0; j <= half_string; j++)
 	{
 		temporal = s[j];
 		s[j] = s[i];
