@@ -9,7 +9,7 @@ int _length(char *s, int length)
 {
 	if (*s == '\0')
 		return (length);
-	return _length(s + 1, length + 1);
+	return (_length(s + 1, length + 1));
 }
 /**
  * _strlen_recursion - function that returns length of a string.
