@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, mul = 1, retn;
+	int i, mul = 1;
 
 	if (argc > 1)
 	{
@@ -17,12 +17,12 @@ int main(int argc, char *argv[])
 			mul *= atoi(argv[i]);
 		}
 		printf("%d\n", mul);
-		return (retn = 0);
+		return (0);
 	}
 	else
 	{
 		printf("Error\n");
-		return (retn = 1);
+		return (1);
 	}
-	return (retn);
+	return (0);
 }
