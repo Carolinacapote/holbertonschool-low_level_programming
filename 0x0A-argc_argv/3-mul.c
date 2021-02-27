@@ -8,20 +8,21 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, mul = 1;
+	int i, mul = 1, retn;
 
-	if (argc <= 1)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	else
+	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
 			mul *= atoi(argv[i]);
 		}
 		printf("%d\n", mul);
-		return (0);
+		return (retn = 0);
 	}
+	else
+	{
+		printf("Error\n");
+		return (retn = 1);
+	}
+	return (retn);
 }
