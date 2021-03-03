@@ -2,6 +2,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * _length - Finds the lenght of a string.
+ * @str: String.
+ * @length: Length of s.
+ * Return: length.
+ */
+int _length(char *str, int length)
+{
+	if (*str == '\0')
+		return (length);
+	return (_length(str + 1, length + 1));
+}
+/**
  * _strdup - Function that returns a pointer to a newly allocated space in
  * memory, which contains a copy of the string given as a parameter.
  * @str: String to be duplicated.
@@ -10,21 +22,19 @@
  */
 char *_strdup(char *str)
 {
-	int size = 0;
 	char *duplicate, *copy;
 
-	while (*(str + size) != '\0')
-		size++;
-	duplicate = malloc(sizeof(char) * size + 1);
+	duplicate = malloc(sizeof(char) * _length(str, 0) + 1);
 	if (str == NULL)
 		return (NULL);
 	copy = duplicate;
-	size = 0;
-	while (*(str + size))
+	while (*str)
 	{
-		copy[size] = str[size];
-		size++;
+		*copy = *str;
+		str++;
+		copy++;
 	}
 	*copy = '\0';
 	return (duplicate);
+	free(duplicate);
 }
