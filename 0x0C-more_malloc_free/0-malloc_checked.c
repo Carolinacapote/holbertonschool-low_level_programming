@@ -9,8 +9,8 @@ void *malloc_checked(unsigned int b)
 {
 	int *point;
 
-	point = malloc(sizeof *point * b);
+	point = malloc(b);
 	if (!point)
-		return ("98");
+		exit(98);
 	return (point);
 }
