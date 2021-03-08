@@ -4,6 +4,7 @@
  */
 int main()
 {
-	printf("%s\n",__FILE__);
+	printf("%s",__FILE__);
+	printf("\n");
 	return (0);
 }
