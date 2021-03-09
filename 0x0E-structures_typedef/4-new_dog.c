@@ -24,7 +24,6 @@ char *_strdup(char *name)
 		dupli_name[i] = name[i];
 	dupli_name[i] = '\0';
 	return (dupli_name);
-	free(dupli_name);
 }
 /**
  * new_dog - function that creates a new dog.
