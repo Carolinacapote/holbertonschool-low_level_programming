@@ -2,31 +2,6 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * _strdup_own - Function that returns a pointer to a newly allocated space in
- * memory, which contains a copy of the string given as a parameter.
- * @owner: String to be duplicated.
- * Return: Pointer to the duplicate of str, NULL if str = NULL or if
- * insufficient memory is available.
- */
-char *_strdup_own(char *owner)
-{
-	char *dupli_own;
-	int len = 0, i;
-
-	if (owner == NULL)
-		return (NULL);
-	while (owner[len])
-		len++;
-	dupli_own = malloc(sizeof(char) * len + 1);
-	if (!dupli_own)
-		return (NULL);
-	for (i = 0; owner[i]; i++)
-		dupli_own[i] = owner[i];
-	dupli_own[i] = '\0';
-	return (dupli_own);
-	free(dupli_own);
-}
-/**
  * _strdup - Function that returns a pointer to a newly allocated space in
  * memory, which contains a copy of the string given as a parameter.
  * @name: String to be duplicated.
@@ -67,6 +42,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	new_doggy->name = _strdup(name);
 	new_doggy->age = age;
-	new_doggy->owner = _strdup_own(owner);
+	new_doggy->owner = _strdup(owner);
 	return (new_doggy);
 }
