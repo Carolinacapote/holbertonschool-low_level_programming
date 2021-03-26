@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * get_bit - function that returns the value of a bit at a given index.
  * @n: decimal nomber to be used.
@@ -11,7 +12,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int a[1024];
 	int num_at_index;
 
-	if (n < 1)
+	if (n == 0)
 	{
 		return (0);
 	}
