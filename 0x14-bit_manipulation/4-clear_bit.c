@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
- * set_bit - function that returns the value of a bit at a given index.
+ * clear_bit - set the value in index position to 0.
  * @n: decimal number to be used.
  * @index: position of the digit in the binary representation.
  * Return: 1 if it worked, or -1 if an error occurred.
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	int i;
 	unsigned int a[1024];
