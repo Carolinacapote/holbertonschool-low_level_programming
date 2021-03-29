@@ -18,13 +18,14 @@ int create_file(const char *filename, char *text_content)
 	new_file = open(filename, O_CREAT | O_WRONLY, 0600);
 	if (new_file < 0)
 		return (-1);
-	while (text_content[i] != '\0')
+	if (text_content)
 	{
-		i++;
+		while (text_content[i] != '\0')
+		{
+			i++;
+		}
 	}
 	write(new_file, text_content, i);
-	if (!write)
-		return (-1);
 	close(new_file);
 	return (1);
 }
