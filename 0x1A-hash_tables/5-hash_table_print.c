@@ -21,9 +21,8 @@ void hash_table_print(const hash_table_t *ht)
 
 		while (current)
 		{
-			printf("%s", comma);
+			printf("%s'%s': '%s'", comma, current->key, current->value);
 			comma = ", ";
-			printf("'%s': '%s'", current->key, current->value);
 			current = current->next;
 		}
 	}
