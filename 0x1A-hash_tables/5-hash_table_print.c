@@ -7,8 +7,11 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *current;
-	char *comma = "";
 	unsigned long int i = 0;
+	char *comma = "";
+
+	if (!ht)
+		return;
 
 	printf("{");
 
